@@ -4,10 +4,8 @@ public class Course extends Content{
 
     private int workload;
 
-    public Course() {
-    }
-
-    public Course(int workload) {
+    public Course(String title, String description, int workload) {
+        super(title, description);
         this.workload = workload;
     }
 
@@ -27,9 +25,9 @@ public class Course extends Content{
     @Override
     public String toString() {
         return "Course{" +
-                "title" + getTitle() + '\'' +
-                ", description" + getDescription() + '\'' +
-                ", workload=" + workload +
+                "title: " + getTitle() + '\'' +
+                ", description: " + getDescription() + '\'' +
+                ", workload: " + workload +
                 '}';
     }
 }

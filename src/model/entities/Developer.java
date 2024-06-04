@@ -24,7 +24,10 @@ public class Developer {
     }
 
     public Set<Content> getSubscribedContents() {
-        return subscribedContents;
+        if (subscribedContents.isEmpty())
+            throw new BootcampException("You are not subscribed in any content!");
+        else
+            return subscribedContents;
     }
 
     public void setSubscribedContents(Set<Content> subscribedContents) {
@@ -32,7 +35,10 @@ public class Developer {
     }
 
     public Set<Content> getCompletedContents() {
-        return completedContents;
+        if (subscribedContents.isEmpty())
+            throw new BootcampException("You are not subscribed in any content!");
+        else
+            return completedContents;
     }
 
     public void setCompletedContents(Set<Content> completedContents) {

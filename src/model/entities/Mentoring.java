@@ -6,10 +6,8 @@ public class Mentoring extends Content{
 
     private LocalDate date;
 
-    public Mentoring() {
-    }
-
-    public Mentoring(LocalDate date) {
+    public Mentoring(String title, String description, LocalDate date) {
+        super(title, description);
         this.date = date;
     }
 
@@ -29,9 +27,9 @@ public class Mentoring extends Content{
     @Override
     public String toString() {
         return "Mentoring{" +
-                "title" + getTitle() + '\'' +
-                ", description" + getDescription() + '\'' +
-                ", date=" + date +
+                "title: " + getTitle() + '\'' +
+                ", description: " + getDescription() + '\'' +
+                ", date: " + date +
                 '}';
     }
 }
